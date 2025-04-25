@@ -32,17 +32,17 @@ Route::middleware('auth:api')->group(function () {
 
     Route::get("refresh", [AuthController::class, "refreshToken"]);
     Route::get("logout", [AuthController::class, "logout"]);
-    
-    Route::get("/debug", function () {
-        return response()->json([
-            'message' => 'Debug route is working',
-            'status' => true,
-        ]);
-    });
-    Route::get("/test", function () {
-        return response()->json([
-            'message' => 'Test route is working',
-            'status' => true,
-        ]);
-    });
+});
+
+Route::get("/debug", function () {
+    return response()->json([
+        'message' => 'Debug route is working',
+        'status' => true,
+    ]);
+});
+Route::get("/test", function () {
+    return response()->json([
+        'message' => 'Test route is working',
+        'status' => true,
+    ]);
 });
